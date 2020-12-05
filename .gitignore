@@ -1,3 +1,7 @@
 *.log
 *.db
-/target
+dist
+bin
+.idea
+*.iml
+target
