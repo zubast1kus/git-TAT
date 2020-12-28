@@ -17,7 +17,6 @@ public class SignInWithValidDate extends CommonConditions{
                 .enterEmail()
                 .enterPassword()
                 .signIn();
-        Assert.assertTrue(driver.getCurrentUrl().contains(MainPage.MAIN_URL));
 
         String nameUserFromMainPage = new MainPage(driver)
                 .loginLabel();

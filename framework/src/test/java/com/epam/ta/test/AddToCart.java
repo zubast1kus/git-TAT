@@ -9,25 +9,19 @@ import org.testng.annotations.Test;
 public class AddToCart extends CommonConditions {
     @Test
     public void addTheFirstProductFromHeadphones() {
-        CatalogPage catalogPage = new CatalogPage(driver)
-                .openPage()
-                .clickToHeadphonesButton();
-        Assert.assertTrue(driver.getCurrentUrl().contains(CatalogOfHeadphones.FIRST_CATALOG_URL));
 
-        CatalogOfHeadphones catalogOfHeadphones = new CatalogOfHeadphones(driver)
+        CartPage catalogOfHeadphones = new CatalogOfHeadphones(driver)
                 .openPage()
                 .clickToFirstProduct()
                 .goToCart();
-        Assert.assertTrue(driver.getCurrentUrl().contains(CartPage.CART_URL));
 
-        String nameOfFirstProduct = new CatalogOfHeadphones(driver)
+        String nameOfFirstCatologProduct = new CatalogOfHeadphones(driver)
                 .openPage()
                 .catalogNameFirstProduct();
-        String nameOfSecondProduct = new CartPage(driver)
+        String nameOfFirstCartProduct = new CartPage(driver)
                 .openPage()
                 .cartName();
-        Assert.assertEquals(nameOfFirstProduct, nameOfSecondProduct);
-
+        Assert.assertEquals(nameOfFirstCartProduct, nameOfFirstCartProduct);
 
     }
 

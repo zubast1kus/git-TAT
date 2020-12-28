@@ -14,7 +14,5 @@ public class DiscountProductsWithStikers extends CommonConditions {
                 .IsElementDisplayed();
         Assert.assertTrue(stickersDisplayed);
 
-
-
     }
 }

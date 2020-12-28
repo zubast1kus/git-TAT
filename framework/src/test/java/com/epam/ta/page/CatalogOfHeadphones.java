@@ -49,10 +49,10 @@ public class CatalogOfHeadphones extends AbstractPage {
     }
 
 
-    public CatalogOfHeadphones goToCart() {
+    public CartPage goToCart() {
         WebElement linkToCartImmediately = driver.findElement(goToCartLocator);
         linkToCartImmediately.click();
-        return this;
+        return new CartPage(driver);
     }
 
     public CatalogOfHeadphones addFirstProductToCompare() {
