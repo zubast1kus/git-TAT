@@ -15,7 +15,7 @@ public class AddToCart extends CommonConditions {
                 .clickToFirstProduct()
                 .goToCart();
 
-        String nameOfFirstCatologProduct = new CatalogOfHeadphones(driver)
+        String nameOfFirstCatalogProduct = new CatalogOfHeadphones(driver)
                 .openPage()
                 .catalogNameFirstProduct();
         String nameOfFirstCartProduct = new CartPage(driver)
