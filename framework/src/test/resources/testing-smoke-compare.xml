@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SmokeCompare" verbose="1">
+    <test name="UserAccess">
+        <classes>
+            <class name="com.epam.ta.test.CompareTest"/>
+            <class name="com.epam.ta.test.CompareElements"/>
+        </classes>
+    </test>
+</suite>
