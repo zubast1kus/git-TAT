@@ -50,6 +50,7 @@ public class CartPage extends AbstractPage {
 
     public CartPage deleteProduct() {
         WebElement buttonDelete = driver.findElement(deleteProductLocator);
+        TimeOut.checkClickable(deleteProductLocator,driver);
         buttonDelete.click();
         return this;
     }

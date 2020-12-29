@@ -1,5 +1,6 @@
 package com.epam.ta.waits;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,6 +18,10 @@ public class TimeOut {
 
     public static ExpectedCondition<Boolean> waitForLoad() {
         return driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+    }
+
+    public static WebElement checkClickable(By element, WebDriver driver) {
+        return new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS).until(ExpectedConditions.elementToBeClickable(element));
     }
 
 }

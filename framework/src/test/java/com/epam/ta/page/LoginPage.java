@@ -34,6 +34,7 @@ public class LoginPage extends AbstractPage {
 
     public LoginPage signIn() {
         WebElement logInButton = driver.findElement(signInLocator);
+        TimeOut.checkClickable(signInLocator,driver);
         logInButton.click();
         return this;
     }
