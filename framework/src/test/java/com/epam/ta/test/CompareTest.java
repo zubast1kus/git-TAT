@@ -28,22 +28,5 @@ public class CompareTest extends CommonConditions {
         Assert.assertEquals(nameOfFirstProductFromCatalog, nameOfFirstProductFromCompare);
         Assert.assertEquals(nameOfSecondProductFromCatalog, nameOfSecondProductFromCompare);
     }
-    @Test
-    public void deleteCompareProduct(){
-        CatalogOfHeadphones catalogOfHeadphones = new CatalogOfHeadphones(driver)
-                .openPage()
-                .addFirstProductToCompare()
-                .addSecondProductToCompare()
-                .goToComparison();
-        ComparePage comparePage = new ComparePage(driver)
-                .deleteProduct();
-        Integer quantityOfProduct = new  ComparePage(driver)
-                .quantity();
-        Integer expectedResult1 = 1;
-        Assert.assertEquals(quantityOfProduct, expectedResult1);
 
-        ComparePage comparePageDeleteAll = new ComparePage(driver)
-                .deleteAllProduct();
-        Assert.assertTrue(driver.getCurrentUrl().contains(ComparePage.COMPARE_URL));
-    }
 }

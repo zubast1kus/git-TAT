@@ -5,6 +5,7 @@
         <classes>
             <class name="com.epam.ta.test.CompareTest"/>
             <class name="com.epam.ta.test.CompareElements"/>
+            <class name="com.epam.ta.test.DeleteCompareTest"/>
         </classes>
     </test>
 </suite>
