@@ -24,6 +24,7 @@ public class DriverSingleton {
                 default: {
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--disable-notifications");
                     options.addArguments("--disable-gpu");
                     driver = new ChromeDriver();
                 }
