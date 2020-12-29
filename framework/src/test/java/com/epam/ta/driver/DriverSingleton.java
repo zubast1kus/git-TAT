@@ -27,6 +27,7 @@ public class DriverSingleton {
                     options.addArguments("--disable-notifications");
                     options.addArguments("--disable-gpu");
                     driver = new ChromeDriver();
+
                 }
             }
             driver.manage().window().maximize();
